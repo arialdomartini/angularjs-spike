@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "angularjs-spike",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/arialdomartini/angularjs-spike.git",
+  "license": "GPL2",
+  "devDependencies": {
+    "karma": "~0.10",
+    "protractor": "~0.20.1",
+    "http-server": "^0.6.1",
+    "bower": "^1.3.1",
+    "shelljs": "^0.2.6"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -p 8000"
+  }
+}
