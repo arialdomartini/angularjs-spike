@@ -11,6 +11,7 @@ describe('PhoneCat controllers', function() {
       var scope = {},
           ctrl = $controller('PhoneListController', {$scope:scope});
 
+        expect(scope.name).toBe('AngularSpike');
       expect(scope.phones.length).toBe(3);
     }));
 
