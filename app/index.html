@@ -9,15 +9,23 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="PhoneListController">
-
-  <h1>{{name}}!</h1>
-  <p>Total number of phones: {{phones.length}}</p>
-  <ul>
-    <li ng-repeat="phone in phones">
-      {{phone.name}}
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        Search <input ng-model="query">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10">
+    <h1>{{name}}!</h1>
+    <p>Total number of phones: {{phones.length}}</p>
+    <ul>
+      <li ng-repeat="phone in phones | filter:query">
+        {{phone.name}}
+        <p>{{phone.snippet}}</p>
+      </li>
+    </ul>
+  </div>
 
 </body>
 </html>
